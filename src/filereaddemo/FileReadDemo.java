@@ -11,6 +11,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import javax.swing.JFrame;
 
 /**
  *
@@ -56,7 +57,16 @@ public class FileReadDemo {
                     System.out.println(allLogs.get(i)[j]);
                 }
             }
-        }  
+        }
+        JFrame frame = new JFrame("TableDemo");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+ 
+        DemoVisual newContentPane = new DemoVisual(allLogs);
+        newContentPane.setOpaque(true); 
+        frame.setContentPane(newContentPane);
+ 
+        frame.pack();
+        frame.setVisible(true);
     }
     
 }
