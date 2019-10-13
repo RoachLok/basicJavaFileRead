@@ -22,10 +22,11 @@ public class FileReadDemo {
      * @param args the command line arguments
      */
     static ArrayList<String[]> allLogs = new ArrayList<String[]>();
-
+    static String[] parsed = {"", "", "", "", ""};
+    
     public static void parseLine(String line, int i, int k){
-        String holder = "";      
-        String[] parsed = {"", "", "", "", ""};
+        String holder = "";
+        
         if (k < 4){
             for (; line.charAt(i) != ' ' ; i++)
                 holder += line.charAt(i); 
