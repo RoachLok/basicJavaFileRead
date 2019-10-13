@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<TitledPane text="Historial de Sensores" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <content>
+      <SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="400.0" prefWidth="175.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <DatePicker layoutX="8.0" layoutY="31.0" prefHeight="25.0" prefWidth="160.0" promptText="Fecha" />
+                              <ComboBox layoutX="14.0" layoutY="73.0" prefWidth="150.0" promptText="Estudiante" visibleRowCount="4" />
+                              <ComboBox layoutX="36.0" layoutY="111.0" prefHeight="25.0" prefWidth="107.0" promptText="Tipo" visibleRowCount="4" />
+                              <Button layoutX="61.0" layoutY="151.0" mnemonicParsing="false" text="Buscar" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <CheckBox layoutX="40.0" layoutY="48.0" mnemonicParsing="false" text="Sensor 1" />
+                              <CheckBox layoutX="40.0" layoutY="90.0" mnemonicParsing="false" text="Sensor 2" />
+                              <CheckBox layoutX="40.0" layoutY="133.0" mnemonicParsing="false" text="Sensor 3" />
+                              <Label layoutX="14.0" layoutY="14.0" prefHeight="19.0" prefWidth="59.0" text="Sensores:" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ScrollPane layoutX="1.0" prefHeight="398.0" prefWidth="417.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="395.0" prefWidth="415.0">
+                           <children>
+                              <TableView layoutX="-2.0" layoutY="-2.0" prefHeight="398.0" prefWidth="418.0">
+                                <columns>
+                                  <TableColumn prefWidth="75.0" text="Time" />
+                                  <TableColumn prefWidth="75.0" text="Type" />
+                                    <TableColumn prefWidth="75.0" text="Student" />
+                                    <TableColumn prefWidth="195.0" text="Log" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </content>
+</TitledPane>
