@@ -1,0 +1,10 @@
+2019-10-11 16:01:45 FATAL Sensor:3 - Sensor 3 activated
+2019-10-11 16:01:45 WARN Sensor:2 - Sensor 2 activated
+2019-10-11 16:01:45 INFO Student:1 - Sensor 1 activated
+2019-10-11 16:01:45 INFO Student:1 - Sensor 1 activated
+2019-10-11 16:01:45 INFO Student:1 - Sensor 1 activated
+2019-10-11 16:01:45 WARN Student:2 - Sensor 2 activated
+2019-10-11 16:01:45 INFO Student:1 - Sensor 1 activated
+2019-10-11 16:01:45 WARN Student:2 - Sensor 2 activated
+2019-10-11 16:01:45 INFO Student:1 - Sensor 1 activated
+2019-10-11 16:01:45 FATAL Student:3 - Sensor 3 activated
