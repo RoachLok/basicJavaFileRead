@@ -22,48 +22,46 @@ public class FileReadDemo {
     /**
      * @param args the command line arguments
      */
-    static ArrayList<String[]> allLogs = new ArrayList<String[]>();
     static String[] parsed = {"", "", "", "", ""};
+    static String tableData[][] = new String[10][5];
+    static int j = 0;
     
     public static void parseLine(String line, int i, int k){
         String holder = "";
-        
+
         if (k < 4){
             for (; line.charAt(i) != ' ' ; i++)
                 holder += line.charAt(i); 
             
-            parsed[k] = holder;
+            tableData[j][k] = holder;
             parseLine(line, i+1, k+1);
         }
         else{
             for (i+=2; i<line.length() ; i++)
                 holder += line.charAt(i);  
             
-            parsed[k] = holder;
-            allLogs.add(parsed);
+            tableData[j][k] = holder;
+            j++;
         }
     }
-    
+
     public static void main(String[] args) throws FileNotFoundException, IOException {
         File logs = new File("./logs");
+        
         try (BufferedReader br = new BufferedReader(new FileReader(logs))) {
         String line;
             while ((line = br.readLine()) != null) {
                 int i = 0, k = 0;
                 parseLine(line, i, k);
             }
-            for (int i = 0; i < allLogs.size(); i++) {
-                for (int j = 0; j < 5; j++) {
-                    System.out.println(allLogs.get(i)[j]);
-                }
-            }
         }
+        
         JFrame frame = new JFrame("TableDemo");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
- 
-        DemoVisual newContentPane = new DemoVisual(allLogs);
-        newContentPane.setOpaque(true); 
-        frame.setContentPane(newContentPane);
+        DemoVisual table = new DemoVisual(tableData);
+        
+        table.setOpaque(true); 
+        frame.setContentPane(table);
  
         frame.pack();
         frame.setVisible(true);
